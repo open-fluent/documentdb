@@ -4,8 +4,8 @@
     "display": "standalone",
     "scope": "/",
     "start_url": "/",
-    "name": "RedFox DocumentDB",
-    "short_name": "RedFox DocumentDB",
+    "name": "DocumentDB",
+    "short_name": "DocumentDB",
     "description": "Fluent.DocumentDb - A high-performance .NET client for Microsoft's DocumentDb, optimized for event sourcing, secure storage, and seamless ASP.NET Core integration.",
     "icons": [
         {
