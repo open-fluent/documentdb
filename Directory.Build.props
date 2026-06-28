@@ -1,34 +1,21 @@
 <Project>
-
-  <PropertyGroup>
-    <RepositoryDirectory>$(MSBuildThisFileDirectory)</RepositoryDirectory>
-    <BuildToolsDirectory>$(RepositoryDirectory)build\</BuildToolsDirectory>
-  </PropertyGroup>
-
   <PropertyGroup>
     <Version>1.0.0-preview.1</Version>
     <AssemblyVersion>1.0.0</AssemblyVersion>
   </PropertyGroup>
 
   <PropertyGroup>
-    <Company>RedFox and Open-Source Contributors</Company>
-    <Authors>RedFox and Open-Source Contributors</Authors>
-    <Product>RedFox.DocumentDb.EventSourcing</Product>
-    <CommonTags>documentdb;document;eventdriven;eventstore;event-sourcing;nosql;npgsql;postgresql;database;event-stream;datastore;transations;projections;</CommonTags>
+    <Company>documentdb.co</Company>
+    <Authors>documentdb.co</Authors>
+    <Product>Fluent Framework</Product>
+    <CommonTags>documentdb;mongodb;mongo;cosmos;cosmosdb;npgsql;postgresql;linux;amazon;microsoft;fluent</CommonTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Copyright>(c) RedFox and Open-Source Contributors. All rights reserved.</Copyright>
-    <PackageProjectUrl>https://github.com/redfoxdb/documentdb.eventsourcing</PackageProjectUrl>
-    <PackageReleaseNotes>https://github.com/redfoxdb/documentdb.eventsourcing/releases</PackageReleaseNotes>
+    <Copyright>(c) documentdb.co | Leszek Pomianowski and Fluent DocumentDb Contributors. All rights reserved.</Copyright>
+    <PackageProjectUrl>https://github.com/open-fluent/documentdb</PackageProjectUrl>
+    <PackageReleaseNotes>https://github.com/open-fluent/documentdb/releases</PackageReleaseNotes>
     <PackageIcon>Icon.png</PackageIcon>
-    <PackageIconUrl>https://github.com/redfoxdb/documentdb.eventsourcing/main/build/nuget.png</PackageIconUrl>
-  </PropertyGroup>
-
-  <PropertyGroup>
-    <NuGetAudit>true</NuGetAudit>
-    <NuGetAuditLevel>moderate</NuGetAuditLevel>
-    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
-    <CentralPackageTransitivePinningEnabled>false</CentralPackageTransitivePinningEnabled>
+    <PackageIconUrl>https://github.com/open-fluent/documentdb/main/build/nuget.png</PackageIconUrl>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -37,8 +24,9 @@
 
   <PropertyGroup>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <LangVersion>13.0</LangVersion>
+    <LangVersion>14.0</LangVersion>
     <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
 
     <!--
         Suppress ref safety warnings in unsafe contexts (see https://github.com/dotnet/csharplang/issues/6476).
@@ -49,15 +37,39 @@
   </PropertyGroup>
 
   <PropertyGroup>
+    <RepositoryDirectory>$(MSBuildThisFileDirectory)</RepositoryDirectory>
+    <BuildToolsDirectory>$(RepositoryDirectory)build\</BuildToolsDirectory>
+  </PropertyGroup>
+
+  <PropertyGroup>
     <IsTestProject>$(MSBuildProjectName.Contains('Test'))</IsTestProject>
     <IsCoreProject Condition="$(IsTestProject)">False</IsCoreProject>
     <IsCoreProject Condition="'$(IsCoreProject)' == ''">True</IsCoreProject>
+    <IsBelowNet8
+      Condition="'$(TargetFramework)' == 'netstandard2.0'
+                 Or '$(TargetFramework)' == 'netstandard2.1'
+                 Or '$(TargetFramework)' == 'net462'
+                 Or '$(TargetFramework)' == 'net472'
+                 Or '$(TargetFramework)' == 'net481'
+                 Or '$(TargetFramework)' == 'net5.0'
+                 Or '$(TargetFramework)' == 'net6.0'
+                 Or '$(TargetFramework)' == 'net7.0'
+                 Or '$(TargetFramework)' == 'net8.0'
+                 Or '$(TargetFramework)' == 'net9.0'
+                 Or '$(TargetFramework)' == 'net10.0'
+                 Or '$(TargetFramework)' == 'net11.0'"
+      >True</IsBelowNet8
+    >
   </PropertyGroup>
 
   <PropertyGroup>
     <IsPackable>true</IsPackable>
     <IsPublishable>true</IsPublishable>
     <ContinuousIntegrationBuild>$(TF_BUILD)</ContinuousIntegrationBuild>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(IsBelowNet8)' == 'false'">
+    <DefineConstants>$(DefineConstants);NET8_0_OR_GREATER</DefineConstants>
   </PropertyGroup>
 
   <Choose>
@@ -76,14 +88,6 @@
     </Otherwise>
   </Choose>
 
-  <!-- Include PolySharp to generate polyfills for all projects (on their .NET Standard 2.x targets) -->
-  <ItemGroup>
-    <PackageReference Include="PolySharp">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>build; analyzers</IncludeAssets>
-    </PackageReference>
-  </ItemGroup>
-
   <Choose>
     <When Condition="'$(SourceLinkEnabled)' != 'false'">
       <PropertyGroup>
@@ -99,5 +103,4 @@
       </ItemGroup>
     </When>
   </Choose>
-
 </Project>

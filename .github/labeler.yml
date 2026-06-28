@@ -1,30 +1,34 @@
 release:
-  - base-branch: 'main'
+  - base-branch: "main"
 
 PR:
-  - base-branch: [ 'main', 'development' ]
+  - base-branch: ["main", "development"]
 
 github_actions:
-- changed-files:
-  - any-glob-to-any-file: '.github/workflows/**'
+  - changed-files:
+      - any-glob-to-any-file: ".github/workflows/**"
 
 documentation:
-- changed-files:
-  - any-glob-to-any-file: 'docs/**'
+  - changed-files:
+      - any-glob-to-any-file: "docs/**"
 
 dotnet:
-- changed-files:
-  - any-glob-to-any-file: '**/*.cs'
+  - changed-files:
+      - any-glob-to-any-file: "**/*.cs"
 
 update:
-- changed-files:
-  - any-glob-to-any-file: 'src/Directory.Build.props'
+  - changed-files:
+      - any-glob-to-any-file: "src/Directory.Build.props"
 
 NuGet:
-- changed-files:
-  - any-glob-to-any-file: 'src/Directory.Packages.props'
+  - changed-files:
+      - any-glob-to-any-file: "src/Directory.Packages.props"
 
 dependencies:
-- changed-files:
-  - any-glob-to-any-file: [ 'src/Directory.Packages.props', 'branding/package.json' ]
+  - changed-files:
+      - any-glob-to-any-file:
+          ["src/Directory.Packages.props", "branding/package.json"]
 
+http-client:
+  - changed-files:
+      - any-glob-to-any-file: "src/Fluent.HttpClient/**"

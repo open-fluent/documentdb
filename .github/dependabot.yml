@@ -14,11 +14,10 @@ updates:
         interval: "daily"
     labels:
         - "Actions" 
-
   # Maintain dependencies for nuget
   - package-ecosystem: "nuget"
     target-branch: "development"
-    directory: "/"
+    directory: "src"
     schedule:
         interval: "daily"
     labels:

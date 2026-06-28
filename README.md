@@ -1,86 +1,66 @@
-# 🦊 RedFox.DocumentDb.EventSourcing
+# Fluent.DocumentDb
 
-RedFox.DocumentDb.EventSourcing is a .NET library designed to bring event sourcing to Microsoft DocumentDB with PostgreSQL. It provides a scalable, high-performance solution for storing and replaying events in distributed applications, making event-driven architectures easier to implement.
+[Created in Poland by Leszek Pomianowski](https://lepo.co/) and the open-source community.
 
-## 👀 What’s in this repo?
+Fluent.DocumentDb is a .NET library for building applications on top of [DocumentDB](https://github.com/documentdb/documentdb), an open-source document database built on PostgreSQL.
 
-This repository contains the `RedFox.DocumentDb.EventSourcing` library, providing a structured and efficient way to implement event sourcing on Microsoft DocumentDB.
+DocumentDB started at Microsoft as a PostgreSQL extension for document workloads and is now hosted by the Linux Foundation. It brings document database capabilities to the PostgreSQL ecosystem, with a focus on MongoDB API compatibility, portability, performance, and open governance.
 
-Features:  
-✅ Optimized for Event Sourcing – Append-only, immutable event storage  
-✅ Seamless .NET Integration – Built for ASP.NET Core with Dependency Injection support  
-✅ High Performance – Efficient event retrieval and replaying  
-✅ Cloud & Kubernetes Ready – Designed for scalable and distributed architectures  
-✅ PostgreSQL-backed Document Storage – Utilizing Microsoft’s latest DocumentDB technology
+The goal of Fluent.DocumentDb is to make DocumentDB feel natural in .NET applications: simple to configure, easy to test, and ready for modern cloud-native services.
 
-## 🛟 Support & Contributions
+## Why DocumentDB
 
-We offer support plans for enterprise users and encourage community contributions!
+DocumentDB is designed for teams that want a document database without giving up PostgreSQL.
 
-🔗 Check out RedFox support plans  
-🤝 Sponsor the project on GitHub
+- Built on PostgreSQL and its mature storage, indexing, query planning, and operational ecosystem
+- Uses the document database model familiar from MongoDB and Azure Cosmos DB
+- Targets compatibility with MongoDB drivers and tools
+- Avoids vendor lock-in through an open-source, MIT-licensed engine
+- Gives developers a practical path from NoSQL workloads to a PostgreSQL-backed platform
+- Backed by a growing ecosystem that includes Microsoft, AWS, and the Linux Foundation community
 
-## 💎 Our Commitment to Open Source & Enterprise Stability
+PostgreSQL already has strong support for JSON and JSONB. DocumentDB builds on that foundation and turns PostgreSQL into a dedicated document database engine for modern applications.
 
-At RedFox, we believe that event sourcing should always be open, transparent, and accessible. That’s why **RedFox.DocumentDb.EventSourcing** is and always will be 100% open-source under the permissive MIT license. Companies can confidently integrate our technology into their mission-critical applications, knowing that their data architecture will never be disrupted by restrictive licensing changes or vendor lock-in.
+## Packages
 
-We are committed to long-term stability, security, and interoperability, ensuring that businesses can build event-driven solutions with confidence. While the core library remains open and free, our enterprise support plans provide expert assistance with troubleshooting, upgrades, performance optimizations, and architectural guidance, helping organizations maximize their investment in event sourcing with Microsoft DocumentDB.
+| Package | Description | NuGet |
+|---------|-------------|-------|
+| [Fluent.DocumentDb](src/Fluent.DocumentDb) | Core .NET library for working with PostgreSQL-backed DocumentDB | [![NuGet](https://img.shields.io/nuget/v/Fluent.DocumentDb.svg)](https://www.nuget.org/packages/Fluent.DocumentDb) |
+| [Fluent.DocumentDb.DependencyInjection](src/Fluent.DocumentDb.DependencyInjection) | Dependency injection extensions for ASP.NET Core and worker services | [![NuGet](https://img.shields.io/nuget/v/Fluent.DocumentDb.DependencyInjection.svg)](https://www.nuget.org/packages/Fluent.DocumentDb.DependencyInjection) |
 
-## 📦 Getting Started
-
-RedFox.DocumentDb.EventSourcing is available as a NuGet package:
-🔗 NuGet Package
-
-### Installation
-
-#### Using .NET CLI
+## Getting started
 
 ```powershell
-dotnet add package RedFox.DocumentDb.EventSourcing
+dotnet add package Fluent.DocumentDb
 ```
 
-#### Using Package Manager
+For applications using `Microsoft.Extensions.DependencyInjection`:
 
 ```powershell
-NuGet\Install-Package RedFox.DocumentDb.EventSourcing
+dotnet add package Fluent.DocumentDb.DependencyInjection
 ```
 
-## 🛠️ How to Use
+This project is in early development. The public API is being designed around compatibility, performance, and a small developer-friendly surface area.
 
-### 1️⃣ Configure Event Store
+## Learn more about DocumentDB
 
-Register the event store in your ASP.NET Core service container:
+- [DocumentDB GitHub repository](https://github.com/documentdb/documentdb)
+- [DocumentDB project website](https://documentdb.io/)
+- [Linux Foundation welcomes DocumentDB](https://www.linuxfoundation.org/press/linux-foundation-welcomes-documentdb-to-advance-open-developer-first-nosql-innovation)
+- [Microsoft: DocumentDB joins the Linux Foundation](https://opensource.microsoft.com/blog/2025/08/25/documentdb-joins-the-linux-foundation/)
+- [AWS joins the DocumentDB project](https://aws.amazon.com/blogs/opensource/aws-joins-the-documentdb-project-to-build-interoperable-open-source-document-database-technology/)
 
-```csharp
-services.AddDocumentDbEventStore(options =>
-{
-    options.ConnectionString = "your-documentdb-connection";
-    options.DatabaseName = "events";
-});
+## Building from source
+
+Requires [.NET 10 SDK](https://dotnet.microsoft.com/download) or later.
+
+```powershell
+git clone https://github.com/open-fluent/documentdb.git
+cd documentdb
+dotnet build
+dotnet test
 ```
 
-### 2️⃣ Store Events
+## License
 
-Save domain events to the event store:
-
-```csharp
-await eventStore.AppendAsync("stream-id", new UserCreatedEvent { UserId = 123 });
-```
-
-### 3️⃣ Retrieve and Replay Events
-
-```csharp
-var events = await eventStore.ReadStreamAsync("UserCreated");
-
-foreach (var ev in events)
-{
-    Console.WriteLine(ev.Data);
-}
-```
-
-## 📜 License
-
-RedFox.DocumentDb.EventSourcing is licensed under the MIT License, allowing both private and commercial use.
-Make sure to include a copy of the license in your project.
-
-Join us in redefining event-driven architectures with Microsoft DocumentDB! 🚀
+Fluent.DocumentDb is free and open source software licensed under the **MIT License**. You can use it in private and commercial projects.

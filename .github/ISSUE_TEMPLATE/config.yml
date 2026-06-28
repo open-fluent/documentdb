@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Documentation
+    url: https://documentdb.co/documentation/
+    about: Find out how Fluent Framework works.
+  - name: Tutorial
+    url: https://documentdb.co/documentation/tutorial
+    about: Having trouble with the basics? Check out the tutorial!
+  - name: documentdb.co contact
+    url: https://documentdb.co/contact
+    about: Do you want to establish business contact? Let us know.

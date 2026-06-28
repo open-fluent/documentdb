@@ -1,17 +1,18 @@
-RedFox.DocumentDb
+@ -1,171 +0,0 @@
+Fluent.DocumentDb
 
 THIRD-PARTY SOFTWARE NOTICES AND INFORMATION
 Do Not Translate or Localize
 
 This project incorporates components from the projects listed below. The original copyright notices and the licenses under which the authors received such components are set forth below.
 
-1.	Sergio0694/PolySharp version 1.15.0 (https://github.com/Sergio0694/PolySharp), included in RedFox.DocumentDb.SourceGenerators.
-2.	Sergio0694/ComputeSharp version 3.1.0 (https://github.com/Sergio0694/ComputeSharp), included in RedFox.DocumentDb.SourceGenerators.
-3.	CommunityToolkit/dotnet version 1.15.0 (https://github.com/CommunityToolkit/dotnet), included in RedFox.DocumentDb.SourceGenerators.
-4.	npgsql/npgsql version 9.0.2 (https://github.com/npgsql/npgsql), included in RedFox.DocumentDb.
-5.	Azure/azure-cosmos-dotnet-v2 version 2.22.0 (https://github.com/Azure/azure-cosmos-dotnet-v2), included in RedFox.DocumentDb.
-6.	Azure/azure-cosmos-dotnet-v3 version 3.47.0 (https://github.com/Azure/azure-cosmos-dotnet-v3), included in RedFox.DocumentDb.
-7.	microsoft/documentdb version 0.101-0 (https://github.com/microsoft/documentdb), included in RedFox.DocumentDb.
+1.	Sergio0694/PolySharp version 1.15.0 (https://github.com/Sergio0694/PolySharp), included in Fluent.DocumentDb.SourceGenerators.
+2.	Sergio0694/ComputeSharp version 3.1.0 (https://github.com/Sergio0694/ComputeSharp), included in Fluent.DocumentDb.SourceGenerators.
+3.	CommunityToolkit/dotnet version 1.15.0 (https://github.com/CommunityToolkit/dotnet), included in Fluent.DocumentDb.SourceGenerators.
+4.	npgsql/npgsql version 9.0.2 (https://github.com/npgsql/npgsql), included in Fluent.DocumentDb.
+5.	Azure/azure-cosmos-dotnet-v2 version 2.22.0 (https://github.com/Azure/azure-cosmos-dotnet-v2), included in Fluent.DocumentDb.
+6.	Azure/azure-cosmos-dotnet-v3 version 3.47.0 (https://github.com/Azure/azure-cosmos-dotnet-v3), included in Fluent.DocumentDb.
+7.	microsoft/documentdb version 0.101-0 (https://github.com/microsoft/documentdb), included in Fluent.DocumentDb.
 
 %% Sergio0694/PolySharp NOTICES AND INFORMATION BEGIN HERE
 =========================================

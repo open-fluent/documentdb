@@ -30,7 +30,7 @@ body:
       required: true
     attributes:
       label: OS version
-      description: Which OS versions did you see the issue on? 
+      description: Which OS versions did you see the issue on?
   - type: textarea
     validations:
       required: true
@@ -41,8 +41,8 @@ body:
     validations:
       required: true
     attributes:
-      label: RedFox.DocumentDb NuGet version
-      description: Which RedFox.DocumentDb NuGet versions did you see the issue on?
+      label: Fluent library NuGet version
+      description: Which Fluent library NuGet versions did you see the issue on?
   - type: textarea
     attributes:
       label: Additional context

@@ -1,0 +1,17 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Build.targets" />
+    <File Path="Directory.Packages.props" />
+    <File Path="nuget.config" />
+    <File Path="README.md" />
+    <File Path="ThirdPartyNotices.txt" />
+  </Folder>
+  <Folder Name="/Tests/">
+    <Project Path="tests/Fluent.DocumentDb.UnitTests/Fluent.DocumentDb.UnitTests.csproj" />
+  </Folder>
+  <Project Path="src/Fluent.DocumentDb.DependencyInjection/Fluent.DocumentDb.DependencyInjection.csproj" />
+  <Project Path="src/Fluent.DocumentDb.SourceGenerators/Fluent.DocumentDb.SourceGenerators.csproj" />
+  <Project Path="src/Fluent.DocumentDb/Fluent.DocumentDb.csproj" />
+</Solution>
