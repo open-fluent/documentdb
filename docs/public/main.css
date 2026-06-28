@@ -65,6 +65,9 @@
   grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
   gap: 3rem;
   align-items: center;
+  width: 100%;
+  max-width: 1180px;
+  margin-inline: auto;
 }
 
 .hero-copy {
@@ -99,7 +102,11 @@
 
 .hero-visual {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   min-height: 430px;
+  padding: 1.1rem;
   border: 1px solid var(--fdb-border-strong);
   border-radius: 28px;
   background:
@@ -114,6 +121,7 @@
   content: "";
   position: absolute;
   inset: 1.25rem;
+  z-index: 0;
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 22px;
   background-image:
@@ -121,6 +129,17 @@
     linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
   background-size: 32px 32px;
   mask-image: radial-gradient(circle at center, black, transparent 75%);
+}
+
+.hero-visual-image {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  max-width: 620px;
+  height: auto;
+  margin: auto;
+  border-radius: 22px;
 }
 
 .visual-orbit {
@@ -655,8 +674,23 @@
     grid-template-columns: 1fr;
   }
 
+  .hero-copy {
+    text-align: center;
+  }
+
+  .hero-copy .lead {
+    margin-inline: auto;
+  }
+
+  .hero-cta,
+  .trust-row {
+    justify-content: center;
+  }
+
   .hero-visual {
     min-height: 380px;
+    max-width: 680px;
+    margin-inline: auto;
   }
 
   .proof-strip,
@@ -686,8 +720,13 @@
   }
 
   .hero-visual {
-    min-height: 340px;
+    min-height: 0;
+    padding: 0.65rem;
     border-radius: 18px;
+  }
+
+  .hero-visual-image {
+    border-radius: 14px;
   }
 
   .visual-node {

@@ -20,25 +20,8 @@
         <span>JSONB/BSON-aware</span>
         <span>Cloud & on-premises</span>
       </div>
-    </div>
-
-    <div class="hero-visual" aria-label="Fluent.DocumentDb architecture overview">
-      <div class="visual-orbit visual-orbit-one"></div>
-      <div class="visual-orbit visual-orbit-two"></div>
-      <div class="visual-node node-app">.NET</div>
-      <div class="visual-node node-fluent">Fluent.DocumentDb</div>
-      <div class="visual-node node-documentdb">DocumentDB</div>
-      <div class="visual-node node-postgres">PostgreSQL</div>
-      <div class="visual-pipeline">
-        <span>Typed APIs</span>
-        <span>Document operations</span>
-        <span>Secure storage</span>
-      </div>
-      <div class="visual-metrics">
-        <div><strong>Open</strong><span>MIT direction</span></div>
-        <div><strong>Portable</strong><span>cloud / hybrid</span></div>
-        <div><strong>Governed</strong><span>enterprise ops</span></div>
-      </div>
+    </div><div class="hero-visual" aria-label="Fluent.DocumentDb architecture overview">
+      <img class="hero-visual-image" src="images/home-architecture.svg" alt="Architecture diagram: .NET application, Fluent.DocumentDb, DocumentDB gateway, and PostgreSQL foundation">
     </div>
   </div>
 </div>

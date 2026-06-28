@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="560" viewBox="0 0 760 560" role="img" aria-labelledby="title desc">
+  <title id="title">Fluent.DocumentDb enterprise architecture</title>
+  <desc id="desc">A layered architecture diagram showing .NET applications using Fluent.DocumentDb, DocumentDB capabilities, and PostgreSQL as the operational foundation.</desc>
+  <defs>
+    <linearGradient id="panel" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#12233d"/>
+      <stop offset="1" stop-color="#071120"/>
+    </linearGradient>
+    <linearGradient id="greenBlue" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#43a047"/>
+      <stop offset="1" stop-color="#2f7de1"/>
+    </linearGradient>
+    <linearGradient id="goldBlue" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#d6a84f"/>
+      <stop offset="1" stop-color="#2f7de1"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="20" stdDeviation="20" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+    <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse">
+      <path d="M34 0H0V34" fill="none" stroke="#ffffff" stroke-opacity="0.055"/>
+    </pattern>
+  </defs>
+
+  <rect width="760" height="560" rx="34" fill="url(#panel)"/>
+  <rect x="18" y="18" width="724" height="524" rx="26" fill="url(#grid)" stroke="#ffffff" stroke-opacity="0.1"/>
+  <circle cx="140" cy="98" r="150" fill="#36d399" opacity="0.14"/>
+  <circle cx="650" cy="115" r="180" fill="#2f7de1" opacity="0.18"/>
+  <circle cx="620" cy="470" r="130" fill="#d6a84f" opacity="0.1"/>
+
+  <g opacity="0.55" fill="none" stroke="#ffffff" stroke-opacity="0.22">
+    <ellipse cx="380" cy="272" rx="270" ry="116" transform="rotate(-14 380 272)"/>
+    <ellipse cx="380" cy="272" rx="230" ry="96" transform="rotate(16 380 272)"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="72" y="64" width="194" height="76" rx="20" fill="#0d1a2f" stroke="#ffffff" stroke-opacity="0.18"/>
+    <text x="169" y="96" text-anchor="middle" fill="#ffffff" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" font-weight="800">.NET apps</text>
+    <text x="169" y="119" text-anchor="middle" fill="#a8b8cc" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="13">ASP.NET Core · workers</text>
+
+    <rect x="424" y="92" width="250" height="86" rx="22" fill="#0d1a2f" stroke="#43a047" stroke-opacity="0.42"/>
+    <text x="549" y="126" text-anchor="middle" fill="#b7f7ce" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" font-weight="800">Fluent.DocumentDb</text>
+    <text x="549" y="150" text-anchor="middle" fill="#a8b8cc" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="13">typed APIs · DI · async</text>
+
+    <rect x="86" y="326" width="232" height="86" rx="22" fill="#0d1a2f" stroke="#2f7de1" stroke-opacity="0.42"/>
+    <text x="202" y="360" text-anchor="middle" fill="#b9d8ff" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" font-weight="800">DocumentDB layer</text>
+    <text x="202" y="384" text-anchor="middle" fill="#a8b8cc" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="13">gateway · BSON · indexing</text>
+
+    <rect x="430" y="370" width="230" height="86" rx="22" fill="#0d1a2f" stroke="#d6a84f" stroke-opacity="0.45"/>
+    <text x="545" y="404" text-anchor="middle" fill="#f4d999" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" font-weight="800">PostgreSQL</text>
+    <text x="545" y="428" text-anchor="middle" fill="#a8b8cc" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="13">security · backup · operations</text>
+  </g>
+
+  <g fill="none" stroke="url(#greenBlue)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0.95">
+    <path d="M266 102 C338 96 376 116 424 130"/>
+    <path d="M548 178 C522 250 438 298 318 354"/>
+    <path d="M318 374 C376 392 402 404 430 414"/>
+  </g>
+  <g fill="#36d399">
+    <circle cx="424" cy="130" r="5"/>
+    <circle cx="318" cy="354" r="5"/>
+    <circle cx="430" cy="414" r="5"/>
+  </g>
+
+  <g>
+    <rect x="225" y="219" width="310" height="48" rx="24" fill="url(#greenBlue)" opacity="0.28" stroke="#ffffff" stroke-opacity="0.14"/>
+    <text x="380" y="249" text-anchor="middle" fill="#ffffff" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="15" font-weight="800">Document flexibility with governed operations</text>
+  </g>
+
+  <g font-family="Inter, Segoe UI, Arial, sans-serif">
+    <rect x="60" y="472" width="184" height="48" rx="16" fill="#ffffff" fill-opacity="0.07" stroke="#ffffff" stroke-opacity="0.1"/>
+    <text x="84" y="493" fill="#36d399" font-size="13" font-weight="800">Open foundation</text>
+    <text x="84" y="511" fill="#a8b8cc" font-size="12">MIT-oriented ecosystem</text>
+
+    <rect x="288" y="472" width="184" height="48" rx="16" fill="#ffffff" fill-opacity="0.07" stroke="#ffffff" stroke-opacity="0.1"/>
+    <text x="312" y="493" fill="#36d399" font-size="13" font-weight="800">Portable platform</text>
+    <text x="312" y="511" fill="#a8b8cc" font-size="12">cloud · hybrid · on-prem</text>
+
+    <rect x="516" y="472" width="184" height="48" rx="16" fill="#ffffff" fill-opacity="0.07" stroke="#ffffff" stroke-opacity="0.1"/>
+    <text x="540" y="493" fill="#36d399" font-size="13" font-weight="800">Enterprise control</text>
+    <text x="540" y="511" fill="#a8b8cc" font-size="12">security · observability</text>
+  </g>
+</svg>
