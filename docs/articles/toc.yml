@@ -18,6 +18,8 @@
   href: document-store.md
 - name: Event Store
   href: event-store.md
+- name: CQRS and Event Sourcing
+  href: cqrs-event-sourcing.md
 - name: Configuration
   href: configuration.md
 - name: Roadmap

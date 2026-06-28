@@ -34,6 +34,8 @@
 <a class="capability-card" href="articles/what-is-documentdb.md"><span class="capability-icon">◆</span><h3>DocumentDB foundation</h3><p>Understand the open-source PostgreSQL-backed document database direction.</p></a>
 <a class="capability-card" href="articles/document-store.md"><span class="capability-icon">λ</span><h3>Typed document APIs</h3><p>Work with clear .NET contracts instead of leaking storage details everywhere.</p></a>
 <a class="capability-card" href="articles/jsonb-in-postgresql.md"><span class="capability-icon">⬡</span><h3>JSONB-aware design</h3><p>Know when PostgreSQL JSONB helps and where document boundaries matter.</p></a>
+<a class="capability-card" href="articles/event-store.md"><span class="capability-icon">↗</span><h3>Event Sourcing path</h3><p>Append facts, rebuild state and keep business history explicit.</p></a>
+<a class="capability-card" href="articles/cqrs-event-sourcing.md"><span class="capability-icon">⇄</span><h3>CQRS read models</h3><p>Separate writes from optimized query views for complex enterprise workflows.</p></a>
 <a class="capability-card" href="articles/enterprise-readiness.md"><span class="capability-icon">◈</span><h3>Enterprise posture</h3><p>Plan security, scale, operations and governance before production rollout.</p></a>
 </div>
 </section>
