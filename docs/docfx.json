@@ -28,7 +28,9 @@
         ],
         "exclude": [
           "_site/**",
-          "obj/**"
+          "obj/**",
+          "templates/**/node_modules/**",
+          "templates/**/README.md"
         ]
       }
     ],
@@ -36,6 +38,7 @@
       {
         "files": [
           "**/images/**",
+          "public/**",
           "codesnippet/**",
           "manifest.webmanifest",
           "robots.txt"
@@ -53,16 +56,22 @@
       "ExtractSearchIndex"
     ],
     "globalMetadata": {
-      "_appTitle": "RedFox DocumentDb",
-      "_appName": "RedFox DocumentDb",
+      "_appTitle": "Fluent.DocumentDb",
+      "_appName": "Fluent.DocumentDb",
       "_appFaviconPath": "images/favicon.ico",
       "_appLogoPath": "images/documentdb.png",
-      "_appFooter": "<span>Made with <a href=\"https://dotnet.github.io/docfx\" rel=\"noreferrer\">docfx</a> | Copyright © 2025 <a href=\"https://documentdb.co/\">documentdb.co</a></span>"
+      "_enableSearch": true,
+      "_appFooter": "<span>Built with <a href=\"https://dotnet.github.io/docfx\" rel=\"noreferrer\">DocFX</a> · © 2026 <a href=\"https://github.com/open-fluent\">Open Fluent</a></span>",
+      "_gitContribute": {
+        "repo": "https://github.com/open-fluent/documentdb",
+        "branch": "main"
+      },
+      "_gitUrlPattern": "github"
     },
     "dest": "_site",
     "template": [
       "default",
-      "templates/redfox-documentdb"
+      "modern"
     ],
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],

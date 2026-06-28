@@ -1,14 +1,10 @@
-items:
-  - name: Home
-    href: /
-  - name: Documentation
-    href: /documentation
-    items:
-    - name: Getting started
-      href: documentation/getting-started.md
-    - name: Configuration
-      href: documentation/configuration.md
-    - name: Connection pool
-      href: documentation/connection-pool.md
-  - name: API
-    href: api/
+- name: Home
+  href: index.md
+- name: Documentation
+  href: articles/
+  homepage: articles/getting-started.md
+- name: API Reference
+  href: api/
+  homepage: api/index.md
+- name: GitHub
+  href: https://github.com/open-fluent/documentdb
