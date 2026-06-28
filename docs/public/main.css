@@ -41,7 +41,7 @@
 }
 
 .hero-graphic {
-  padding: 4.5rem 0 4.75rem;
+  padding: 5rem 0 5.5rem;
 }
 
 .hero::before {
@@ -96,7 +96,7 @@
 .hero .lead {
   font-size: 1.25rem;
   opacity: 0.88;
-  max-width: 48rem;
+  max-width: 42rem;
   line-height: 1.55;
 }
 
@@ -291,7 +291,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
-  margin: -1rem 0 3rem;
+  margin: 2rem 0 0;
 }
 
 .proof-strip div {
@@ -360,9 +360,17 @@
   margin: 2rem 0 3rem;
 }
 
+.home-section {
+  margin: 5rem 0;
+}
+
+.home-section-tight {
+  margin-top: 3.5rem;
+}
+
 .section-heading {
   max-width: 760px;
-  margin: 3rem auto 1.5rem;
+  margin: 0 auto 2rem;
   text-align: center;
 }
 
@@ -386,12 +394,16 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
-  margin: 1.5rem 0 3rem;
+  margin: 0 0 3rem;
+}
+
+.capability-grid-compact {
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .capability-card {
   position: relative;
-  min-height: 210px;
+  min-height: 180px;
   padding: 1.5rem;
   border: 1px solid var(--fdb-border);
   border-radius: 18px;
@@ -467,6 +479,10 @@
     linear-gradient(135deg, rgba(47, 125, 225, 0.12), rgba(214, 168, 79, 0.08)),
     var(--fdb-surface);
   box-shadow: var(--fdb-shadow);
+}
+
+.deployment-panel-compact {
+  margin-bottom: 0;
 }
 
 .deployment-steps {
@@ -567,6 +583,14 @@
 .concept-row > [class^="col-"] {
   display: flex;
   margin-bottom: 1.25rem;
+}
+
+.concept-row-compact {
+  margin-top: 1.5rem;
+}
+
+.concept-row-compact .concept-card {
+  padding: 1.2rem 1.35rem;
 }
 
 .concept-card {
@@ -696,6 +720,17 @@
   .proof-strip,
   .capability-grid {
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 992px) {
+  main.container-xxl:not(:has(.toc-offcanvas)) > .affix {
+    display: none !important;
+  }
+
+  main.container-xxl:not(:has(.toc-offcanvas)) > .content {
+    max-width: 1180px;
+    margin-inline: auto;
   }
 }
 
