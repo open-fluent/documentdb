@@ -12,7 +12,9 @@
       ],
       "dest": "api",
       "properties": {
-        "TargetFramework": "net472"
+        "TargetFramework": "net10.0",
+        "NuGetAudit": "false",
+        "RestoreIgnoreFailedSources": "true"
       },
       "disableGitFeatures": false,
       "disableDefaultFilter": false
